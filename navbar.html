@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar Bootstrap</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- 
+    Lezione disponibile al link:
+    
+    - https://github.com/enda0386/bootsrap-navbar.git
+    -->
+
+    <!--
+    Proprietà principali navbar di bootstrap:
+    
+    - navbar-expand-{sm-md-lg-xl} -> breackpoint a cui la navbar passa da modalità estesa ad hamburger menu
+    - navbar-light/dark -> stato dei colori dei link (chiaro/scuro)
+    - bg-light/primary/danger/info/warning ecc -> colore di sfondo. In base al colore scelto, giocare con la proprietà precedente
+    
+    -->
+
+
+    <!--
+    
+    - navbar-brand -> permette di inserire un link sulla sx rispetto alla barra di navigazione; puo' essere completato da un logo 
+    
+    -->
+
+    <h2 class="mb-3">Navbar con navbar-brand</h2>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-uno" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-uno">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Noi <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Corsi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <h2 class="my-3">Navbar con logo e navbar-brand</h2>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-warning">
+        <a class="navbar-brand" href="#"><img src="img/bootstrap_logo.svg" width="30" height="30" alt="" class="mr-3">Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-due" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-due">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Noi <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Corsi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <h2 class="my-3">Navbar con link pagine al centro</h2>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger">
+        <a class="navbar-brand" href="#"><img src="img/bootstrap_logo.svg" width="30" height="30" alt="" class="mr-3">Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-tre" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-tre">
+            <!-- aggiungo mx-auto all'ul per centrare il blocco nella riga -->
+            <ul class="navbar-nav mx-auto">
+               
+                <!-- posso distanziare gli elementi con mr-{2-3-4-5} -->
+                <li class="nav-item active mr-4">
+                    <a class="nav-link" href="#">Noi <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a class="nav-link" href="#">Corsi</a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a class="nav-link" href="#">Contatti</a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <h2 class="my-3">Navbar con elementi centrati ed equidistanti (ul al 75% della riga)</h2>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-quattro" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-quattro">
+            <ul class="navbar-nav d-flex flex-row justify-content-around w-75 mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Noi <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Corsi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+</html>
